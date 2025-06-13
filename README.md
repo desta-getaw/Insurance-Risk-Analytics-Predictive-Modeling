@@ -1,115 +1,59 @@
-# 📊 Fintech Mobile App Review Analysis
+# AlphaCare Insurance Solutions: Risk Analytics & Predictive Modeling
 
-This project is a real-world data engineering and analysis challenge designed for 10 Academy's Artificial Intelligence Mastery Week 2.  
-We analyze customer reviews from the Google Play Store for Ethiopian banks using web scraping, NLP, and visualization techniques, all backed by CI/CD automation with GitHub Actions.
+## Project Overview
+This repository houses the code and analyses for the End-to-End Insurance Risk Analytics & Predictive Modeling project for AlphaCare Insurance Solutions (ACIS). The primary objective is to analyze historical car insurance claim data to optimize marketing strategies and identify "low-risk" client segments.
 
----
+## Business Objective
+As a Marketing Analytics Engineer at ACIS, this project aims to leverage predictive analytics to refine car insurance planning and marketing in South Africa. Key goals include optimizing premiums and attracting new clients by identifying low-risk targets.
 
-## 🚀 Project Objectives
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Business Objective](#business-objective)
+- [Setup and Installation](#setup-and-installation)
+- [Project Structure](#project-structure)
+- [Weekly Tasks](#weekly-tasks)
+- [Contributing](#contributing)
+- [License](#license)
 
-- Scrape reviews from the Google Play Store for **Commercial Bank of Ethiopia (CBE)**, **Bank of Abyssinia (BOA)**, and **Dashen Bank**.
-- Clean and preprocess the review data.
-- Perform sentiment and thematic analysis using NLP techniques.
-- Store cleaned data in an Oracle database.
-- Visualize insights and provide actionable recommendations.
-- Automate testing and linting via GitHub Actions.
+## Setup and Installation
 
----
+1.  **Clone the Repository:**
+    ```bash
+    git clone [https://github.com/YourUsername/YourRepoName.git](https://github.com/YourUsername/YourRepoName.git)
+    cd YourRepoName
+    ```
+2.  **Create a Virtual Environment (Recommended):**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows: `venv\Scripts\activate`
+    ```
+3.  **Install Dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+    *(You will create `requirements.txt` as you add libraries to your project.)*
 
-## 🗂 Project Structure
+## Project Structure
 
-```bash
-fintech-review-analysis/
-├── .github/workflows/ci.yml         # GitHub Actions workflow for CI
-├── data/                            # Folder for raw scraped data
-├── output/                          # Folder for cleaned/processed data
-├── scripts/                         # Python scripts for scraping, preprocessing, NLP
-├── tests/                           # Unit test files
-├── requirements.txt                 # All required packages
-├── main.py                          # Entry point (can orchestrate the pipeline)
-└── README.md                        # Project documentation
-```
+.
+├── data/                 # Raw and processed data
+├── notebooks/            # Jupyter notebooks for EDA, analysis
+├── src/                  # Python scripts for modeling, utilities
+├── .github/              # GitHub Actions workflows
+│   └── workflows/
+│       └── main.yml
+├── .gitignore            # Specifies intentionally untracked files
+├── README.md             # This file
+├── requirements.txt      # Python dependencies
+└── DVC.md                # Data Version Control notes 
 
----
+## Weekly Tasks
+This week's tasks cover:
+1.  **Git and GitHub:** Repository setup, version control, CI/CD.
+2.  **Project Planning - EDA & Stats:** Data understanding, exploratory data analysis, statistical thinking.
+3.  **Data Version Control (DVC):** Establishing reproducible data pipelines.
+4.  **A/B Hypothesis Testing:** Validating risk drivers across different segments.
+5.  **Statistical Modeling:** Building and evaluating predictive models for claim severity and premium optimization.
 
-## ⚙️ Setup Instructions
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/fintech-review-analysis.git
-   cd fintech-review-analysis
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Run the main pipeline:**
-   ```bash
-   python main.py
-   ```
-
----
-
-## 🧪 Testing
-
-We use `pytest` for unit testing. To run all tests:
-
-```bash
-pytest tests/
-```
-
----
-
-## ✅ CI/CD with GitHub Actions
-
-Our CI pipeline performs the following on each push to `main`:
-- Installs dependencies
-- Runs `flake8` for linting
-- Executes unit tests
-- Uploads cleaned CSVs as artifacts
-
-See configuration in `.github/workflows/ci.yml`.
-
----
-
-## 📦 Features to Implement
-
-- `scripts/scrape_reviews.py` — Scrape reviews using `google-play-scraper`
-- `scripts/preprocess.py` — Clean text, handle missing/duplicate data
-- `scripts/sentiment_analysis.py` — Analyze sentiment with TextBlob or Hugging Face
-- `scripts/db_insert.py` — Insert reviews into Oracle or PostgreSQL
-- `main.py` — Orchestrate the complete pipeline
-
----
-
-## 📊 Visualization (Task 4)
-
-Use `matplotlib` or `seaborn` to generate:
-- Sentiment distribution plots
-- Word clouds for each bank
-- Top themes/issues bar charts
-
----
-
-## 🔍 Useful References
-
-- [google-play-scraper](https://pypi.org/project/google-play-scraper/)
-- [TextBlob Sentiment](https://textblob.readthedocs.io/en/dev/)
-- [Hugging Face Transformers](https://huggingface.co/transformers/)
-- [Oracle DB Python Driver](https://python-oracledb.readthedocs.io/en/latest/)
-
----
-
-## 🧑‍💻 Contributors
-
-- This project is part of **10 Academy Week 2 Challenge**
-- Mentors: Mahlet, Kerod, Rediet, Rehmet
-
----
-
-
-## 💬 Contact
-
-Questions? Reach out via email: destaget@gmail.com or [`#all-week-2`](https://github.com/desta-getaw/Customer-Experience-Analytics-for-Fintech-Apps).
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
