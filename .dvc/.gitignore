@@ -1,0 +1,8 @@
+/config.local
+/tmp
+/cache
+# Ignore all data files/folders
+data/**
+
+# Allow .dvc files (DVC metadata)
+!data/*.dvc

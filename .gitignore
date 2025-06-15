@@ -1,0 +1,7 @@
+data/**
+.DS_Store
+.ipynb_checkpoints/
+.vscode/
+.git/
+!data/cleaned_insurance_data.csv.dvc
+
